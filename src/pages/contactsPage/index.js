@@ -9,7 +9,7 @@ export const ContactsPage = () => {
         Contacts
         <SearchBar />
       </Header>
-      <ContactList />
+      <ContactList contacts={[]} />
     </>
   );
 };

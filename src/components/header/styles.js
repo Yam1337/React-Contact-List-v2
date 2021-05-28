@@ -15,5 +15,5 @@ export const HeaderWrapper = styled.div`
   color: #ffffff;
   font-size: 32px;
   font-family: "Open Sans", sans-serif;
-  padding: 5px 5px 15px 5px;
+  padding: 5px 25px 15px 25px;
 `;

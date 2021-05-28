@@ -1,40 +1,36 @@
 import { ContactListWrapper } from "./styles";
 import { Contact } from "../contact/index";
 import { useEffect, useState } from "react";
+import { Loader } from "../loader";
+import { sortContactsByName } from "./utils/sortContactsByName";
+import { fetchUsers } from "./utils/fetchUsers";
 
 export const ContactList = () => {
-  const [Contacts, setContacts] = useState([]);
-  const [Loading, setLoading] = useState(true);
+  const [contacts, setContacts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users"
-      );
-      const json = await response.json();
-      setContacts(json);
+      const users = await fetchUsers();
+      const sortedUsers = sortContactsByName(users);
+      setContacts(sortedUsers);
       setLoading(false);
     };
     getData();
   }, []);
-  console.log(Contacts);
 
-  if (Loading) {
-    return (
-      <ContactListWrapper>
-        <div>Loading...</div>
-      </ContactListWrapper>
-    );
-  }
   return (
     <ContactListWrapper>
-      {Contacts.map((item) => (
-        <Contact
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          phone={item.phone}
-        />
-      ))}
+      {loading && <Loader />}
+      {!loading &&
+        contacts.map((item) => (
+          <Contact
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            phone={item.phone}
+          />
+        ))}
     </ContactListWrapper>
   );
 };

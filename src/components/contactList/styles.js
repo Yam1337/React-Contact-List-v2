@@ -7,5 +7,5 @@ export const ContactListWrapper = styled.div`
   align-items: center;
   background-color: #f7f7f7;
   min-height: calc(100vh - 148px);
-  padding: 15px 5px 15px 5px;
+  padding: 15px 25px 15px 25px;
 `;

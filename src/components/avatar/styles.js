@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { secondary1, secondary2 } from "../../styles/colors";
+import { secondary2 } from "../../styles/colors";
 
 export const AvatarWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 3px 2px 6px ${secondary1};
+  box-shadow: 3px 2px 6px #424242;
   background-color: ${secondary2};
   width: 80px;
   height: 80px;

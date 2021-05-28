@@ -1,13 +1,25 @@
 import { Avatar } from "../avatar";
-import { ContactWrapper } from "./styles";
+import {
+  ContactWrapper,
+  CheckBox,
+  ContactDetails,
+  CheckBoxWrapper,
+  DetailsWrapper,
+} from "./styles";
 
 export const Contact = ({ id, name, phone }) => {
   return (
     <ContactWrapper>
-      <Avatar />
-      <div>{id}</div>
-      <div>{name}</div>
-      <div>{phone}</div>
+      <ContactDetails>
+        <Avatar />
+        <DetailsWrapper>
+          <div>{name}</div>
+          <div>{phone}</div>
+        </DetailsWrapper>
+      </ContactDetails>
+      <CheckBoxWrapper>
+        <CheckBox type="checkbox" />
+      </CheckBoxWrapper>
     </ContactWrapper>
   );
 };

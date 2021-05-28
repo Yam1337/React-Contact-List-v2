@@ -1,11 +1,17 @@
 import styled from "styled-components";
-import { secondary, secondary1 } from "../../styles/colors";
+import {
+  secondary,
+  secondary1,
+  secondary3,
+  secondary4,
+} from "../../styles/colors";
 
 export const ContactWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: ${secondary};
+  /* box-shadow: 3px 2px 6px ${secondary4}; */
   width: 100%;
   padding: 0px 14px 0px 14px;
   height: 100px;
@@ -35,12 +41,26 @@ export const DetailsWrapper = styled.div`
   justify-content: center;
   padding-left: 15px;
   font-size: 18px;
+  font-family: "Montserrat", sans-serif;
 
   & > *:first-child {
-    color: red;
+    font-size: 26px;
+    color: ${secondary3};
   }
 
   & > *:nth-child(2) {
-    color: green;
+    font-size: 16px;
+    color: #000000;
+  }
+`;
+
+export const PhoneWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  & > img {
+    display: flex;
+    height: 20px;
+    margin-right: 5px;
   }
 `;

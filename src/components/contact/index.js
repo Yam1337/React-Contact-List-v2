@@ -5,16 +5,32 @@ import {
   ContactDetails,
   CheckBoxWrapper,
   DetailsWrapper,
+  PhoneWrapper,
 } from "./styles";
+import PhoneIcon from "../../assets/icons/phone.svg";
+import { toggleSelectedId } from "./utils/toggleSelectedId";
 
-export const Contact = ({ id, name, phone }) => {
+export const Contact = ({
+  id,
+  name,
+  phone,
+  activeContacts,
+  setActiveContacts,
+}) => {
   return (
-    <ContactWrapper>
+    <ContactWrapper
+      onClick={() => {
+        setActiveContacts(toggleSelectedId(activeContacts, id));
+      }}
+    >
       <ContactDetails>
         <Avatar />
         <DetailsWrapper>
           <div>{name}</div>
-          <div>{phone}</div>
+          <PhoneWrapper>
+            <img src={PhoneIcon} alt="phone icon" />
+            <div>{phone}</div>
+          </PhoneWrapper>
         </DetailsWrapper>
       </ContactDetails>
       <CheckBoxWrapper>

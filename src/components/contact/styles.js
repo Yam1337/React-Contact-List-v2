@@ -11,7 +11,7 @@ export const ContactWrapper = styled.div`
   height: 100px;
   border-radius: 12px;
   margin-bottom: 8px;
-  &:hover {
+  &:active {
     background-color: ${secondary1};
     transition: 0.5s;
   }
@@ -35,4 +35,12 @@ export const DetailsWrapper = styled.div`
   justify-content: center;
   padding-left: 15px;
   font-size: 18px;
+
+  & > *:first-child {
+    color: red;
+  }
+
+  & > *:nth-child(2) {
+    color: green;
+  }
 `;

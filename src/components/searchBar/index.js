@@ -1,11 +1,11 @@
 import { SearchInput } from "./styles";
 
-export const SearchBar = () => {
+export const SearchBar = ({ setInputValue }) => {
   return (
     <SearchInput
       placeholder="Search contacts..."
       onChange={(e) => {
-        console.log(e.target.value);
+        setInputValue(e.target.value);
       }}
     ></SearchInput>
   );

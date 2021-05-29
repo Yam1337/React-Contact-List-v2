@@ -1,7 +1,7 @@
 # React Contact List
 
 <p align="center">
-<img src="https://github.com/Yam1337/React-Contact-List/blob/master/presentation-contact-list-v2.gif">
+<img src="https://github.com/Yam1337/React-Contact-List-v2/blob/master/presentation-contact-list-v2.gif">
 </p>
 
 # Description

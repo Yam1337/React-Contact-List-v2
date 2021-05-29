@@ -11,7 +11,6 @@ export const ContactWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${secondary};
-  /* box-shadow: 3px 2px 6px ${secondary4}; */
   width: 100%;
   padding: 0px 14px 0px 14px;
   height: 100px;

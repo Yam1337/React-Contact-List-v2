@@ -6,7 +6,6 @@ export const AvatarWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  /* box-shadow: 3px 2px 6px ${secondary4}; */
   background-color: ${secondary2};
   min-width: 80px;
   width: 80px;
@@ -15,6 +14,6 @@ export const AvatarWrapper = styled.div`
 
   & > img {
     display: flex;
-    height: 80%;
+    height: 70%;
   }
 `;

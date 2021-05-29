@@ -9,6 +9,7 @@ import {
 } from "./styles";
 import PhoneIcon from "../../assets/icons/phone.svg";
 import { toggleSelectedId } from "./utils/toggleSelectedId";
+import React, { useState } from "react";
 
 export const Contact = ({
   id,
@@ -17,12 +18,17 @@ export const Contact = ({
   activeContacts,
   setActiveContacts,
 }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const onWrapperClick = () => {
+    const newActiveContacts = toggleSelectedId(activeContacts, id);
+    setActiveContacts(newActiveContacts);
+    console.log(newActiveContacts);
+    setIsChecked((prev) => !prev);
+  };
+
   return (
-    <ContactWrapper
-      onClick={() => {
-        setActiveContacts(toggleSelectedId(activeContacts, id));
-      }}
-    >
+    <ContactWrapper onClick={onWrapperClick}>
       <ContactDetails>
         <Avatar />
         <DetailsWrapper>
@@ -34,7 +40,7 @@ export const Contact = ({
         </DetailsWrapper>
       </ContactDetails>
       <CheckBoxWrapper>
-        <CheckBox type="checkbox" />
+        <CheckBox type="checkbox" checked={isChecked} readOnly />
       </CheckBoxWrapper>
     </ContactWrapper>
   );

@@ -11,3 +11,10 @@ export const ContactListWrapper = styled.div`
   min-width: 400px;
   padding: 15px 25px 15px 25px;
 `;
+export const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: calc(100vh - 148px);
+`;

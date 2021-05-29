@@ -15,7 +15,7 @@ This project is a fake contactlist with search bar, that GETs the contacts from 
 * React Spinners ([npm here](https://www.npmjs.com/package/react-spinners))
 * Styled Components 💅🏾 ([npm here](https://www.npmjs.com/package/styled-components))
 
-# How to run localy
+# How to run locally
 
 * npm install
 * npm run start
